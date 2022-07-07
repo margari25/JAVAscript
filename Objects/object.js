@@ -3,9 +3,12 @@
 const me = {
     name: 'Marg',
     age: 77,
-    greetMe: () => console.log('Labas, Margarita')
+    greetMe: () => console.log('Labas, Margarita'),
+    hobby: ['programuoja', 'moko programuot']
 }
 const backendData = me;
+
+console.log(me.hobby[0]);
 
 me.gender = 'female';
 console.log(me)  //{name: 'Marg', age: 77, gender: 'female'}
@@ -43,7 +46,7 @@ console.log('entries', entries)
 // 0: (2) ['name', 'Marg']
 // 1: (2) ['age', 77]
 // 2: (2) ['greetMe', ƒ]
-// 3: (2) ['gender', 'female']
+// 3: (2) ['gender', 'female'
 // 4: (2) ['height', 171]
 // 5: (2) ['weight', 61]
 
@@ -74,3 +77,16 @@ switch (new Date().getDay()) {
     case 6:
       day = "Saturday";
   }
+  
+// map cycle example
+  const mapExample = [1,2,3,4,5];
+
+  mapExample.map((item) => {
+    console.log(item);
+  })
+
+  const arr = ['a', 'b', 'c', 'd', 'e'];
+const iterator = arr.values();
+for (const letter of iterator) {
+    console.log(letter);
+}
