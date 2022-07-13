@@ -101,6 +101,35 @@ function calculateTip(amount, rating) {
     default: return "Rating not recognised";
   }
 }
+
+function bmi(weight, height) {
+  var formula = (weight / height **2);
+  switch (true) {
+    case formula <=18.5:
+    return 'Underweight';
+    case formula <=25.0:
+    return 'Normal';
+    case formula <=30:
+    return 'Overweight';
+    default:
+    return 'Obese';
+    
+  }
+}
+
+const rps = (player1, player2) => {
+  if (player1 == player2)
+    return 'Draw!';
+    
+   if (player1 == 'rock' && player2 == 'scissors') 
+     return 'Player 1 won!'
+   else if (player1 == 'scissors' && player2 == 'paper') 
+     return 'Player 1 won!'
+   else if (player1 == 'paper' && player2 == 'rock') 
+     return 'Player 1 won!'
+   else
+     return 'Player 2 won!';
+};
 // to Alternate Case
 
 String.prototype.toAlternatingCase = function () {
@@ -130,3 +159,32 @@ function removeEveryOther(arr) {
   });
 }
 
+const grow = x => {
+  let res = 1;
+  for (let i = 0; i < x.length; i++) {
+    res *= x[i];
+  }
+  return res;
+};
+
+//reduce
+function sum (numbers) {
+  if(numbers.length === 0){
+    return 0;
+  }else {
+    return numbers.reduce((a,b)=> a+b);
+  }    
+};
+//arba
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0); //else = 0
+}
+
+function sumArray(array) {
+  if(!array || array.length <= 2){
+      return 0;   
+  }else{
+  
+return array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array);
+}
+}
