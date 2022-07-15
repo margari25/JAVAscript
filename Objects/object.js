@@ -103,32 +103,60 @@ function calculateTip(amount, rating) {
 }
 
 function bmi(weight, height) {
-  var formula = (weight / height **2);
+  var formula = (weight / height ** 2);
   switch (true) {
-    case formula <=18.5:
-    return 'Underweight';
-    case formula <=25.0:
-    return 'Normal';
-    case formula <=30:
-    return 'Overweight';
+    case formula <= 18.5:
+      return 'Underweight';
+    case formula <= 25.0:
+      return 'Normal';
+    case formula <= 30:
+      return 'Overweight';
     default:
-    return 'Obese';
-    
+      return 'Obese';
+
   }
+}
+function updateLight(current) {
+
+  switch (current) {
+    case 'green':
+      return 'yellow';
+      break;
+    case 'yellow':
+      return 'red';
+      break;
+    case 'red':
+      return 'green';
+      break;
+    default:
+      throw 'Error: wrong input';
+      break;
+  }
+  
+}
+//arba
+
+function updateLight(current) {
+  if (current === 'green')
+    return 'yellow'
+  else if (current ==='yellow')
+return 'red'
+  else (current ===' red')
+  return 'green'
 }
 
 const rps = (player1, player2) => {
   if (player1 == player2)
     return 'Draw!';
-    
-   if (player1 == 'rock' && player2 == 'scissors') 
-     return 'Player 1 won!'
-   else if (player1 == 'scissors' && player2 == 'paper') 
-     return 'Player 1 won!'
-   else if (player1 == 'paper' && player2 == 'rock') 
-     return 'Player 1 won!'
-   else
-     return 'Player 2 won!';
+
+  if (player1 == 'rock' && player2 == 'scissors')
+    return 'Player 1 won!'
+  else if (player1 == 'scissors' && player2 == 'paper')
+    return 'Player 1 won!'
+  else if (player1 == 'paper' && player2 == 'rock')
+    return 'Player 1 won!'
+  else
+    return 'Player 2 won!';
 };
 // to Alternate Case
 
@@ -167,13 +195,21 @@ const grow = x => {
   return res;
 };
 
+function countBy(x, n) {
+  var z = [];
+  for (i = 1; i <= n; i++) {
+    z.push(x * i);
+  }
+  return z;
+};
+
 //reduce
-function sum (numbers) {
-  if(numbers.length === 0){
+function sum(numbers) {
+  if (numbers.length === 0) {
     return 0;
-  }else {
-    return numbers.reduce((a,b)=> a+b);
-  }    
+  } else {
+    return numbers.reduce((a, b) => a + b);
+  }
 };
 //arba
 function sum(numbers) {
@@ -181,10 +217,34 @@ function sum(numbers) {
 }
 
 function sumArray(array) {
-  if(!array || array.length <= 2){
-      return 0;   
-  }else{
-  
-return array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array);
+  if (!array || array.length <= 2) {
+    return 0;
+  } else {
+
+    return array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array);
+  }
 }
+
+function isDivideBy(number, a, b) {
+  if (number % a === 0 & number % b === 0) {
+    return true;
+  } else {
+    return false
+  }
 }
+//arba
+
+function isDivideBy(number, a, b) {
+  return (number % a === 0 & number % b === 0) ? true : false
+}
+
+function removeExclamationMarks(s) {
+  return s.split('!').join('');
+}
+
+//arba
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '');
+}
+
