@@ -132,16 +132,16 @@ function updateLight(current) {
       throw 'Error: wrong input';
       break;
   }
-  
+
 }
 //arba
 
 function updateLight(current) {
   if (current === 'green')
     return 'yellow'
-  else if (current ==='yellow')
-return 'red'
-  else (current ===' red')
+  else if (current === 'yellow')
+    return 'red'
+  else (current === ' red')
   return 'green'
 }
 
@@ -248,3 +248,6 @@ function removeExclamationMarks(s) {
   return s.replace(/!/g, '');
 }
 
+function cockroachSpeed(s) {
+  return Math.floor(s * 100000 / 3600)
+}
