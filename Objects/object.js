@@ -194,6 +194,14 @@ const grow = x => {
   }
   return res;
 };
+function firstNonConsecutive(arr) {
+  for (let i = 0; i < arr.length - 1; ++i) {
+    if (arr[i] + 1 !== arr[i + 1]) {
+      return arr[i + 1]
+    }
+  }
+  return null
+}
 
 function correct(s) {
   s = s.split('');
@@ -260,4 +268,11 @@ function removeExclamationMarks(s) {
 
 function cockroachSpeed(s) {
   return Math.floor(s * 100000 / 3600)
+}
+
+function squareOrSquareRoot(array) {
+  return array.map(x => {
+    const n = Math.sqrt(x)
+    return Number.isInteger(n) ? n : x * x
+  })
 }
