@@ -256,6 +256,11 @@ function isDivideBy(number, a, b) {
   return (number % a === 0 & number % b === 0) ? true : false
 }
 
+function twoSort(s) {
+  s.sort();
+  return s[0].split('').join('***');
+}
+
 function removeExclamationMarks(s) {
   return s.split('!').join('');
 }
