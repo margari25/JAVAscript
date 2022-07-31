@@ -289,3 +289,7 @@ function squareOrSquareRoot(array) {
 const points=games=>games.reduce((output,current)=>{
   return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
 },0)
+
+function getRealFloor(n) {
+  return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
+}
