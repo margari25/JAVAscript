@@ -51,7 +51,7 @@ for (let i = 1; i < 11; i++) {
 array = array.map((item, index) => item = index)
 console.log(array);
 
-// 13 Naudojant filter metoda grazinti tik skaicius kurie yra nelyginiai (tiksliai neziurejom, klauskit arba dar geriau google)
+// 13 Naudojant filter metoda grazinti tik skaicius kurie yra nelyginiai 
 let filteredOdd = array.filter((number) => number % 2 == 1);
 console.log(filteredOdd);
 
@@ -64,13 +64,15 @@ passParameter('asfnlf naslasnk daklsdn alsd');
 // 15 Suskurti nauja array su nersvarbu kokiais 5 skaiciais
 const array2 = [12, 12, 12, 12, 12];
 
-// 16 Pasirasyti nauja funkcija kuri naudojant viena is array metodu (reduce) consoleje parasys naujai sukurto array suma
+// 16 Pasirasyti nauja funkcija kuri naudojant viena is array metodu (reduce) consoleje parasys 
+// naujai sukurto array suma
 function getSum(param) {
     let sum = param.reduce((previous, current) => previous + current)
     console.log(sum);
 }
 
-// 17 Praplesti funkcija kad ji priimtu parametra ir iskviesti su array (is 12 uzduoties) ir su naujuoju array, consoleje turetu matytis tiek vieno,
+// 17 Praplesti funkcija kad ji priimtu parametra ir iskviesti su array (is 12 uzduoties)
+//  ir su naujuoju array, consoleje turetu matytis tiek vieno,
 // tiek kito array sumos
 
 getSum(array);
@@ -98,7 +100,8 @@ console.log(sulietiDuObjektai);
 console.log(kazkas);
 console.log(darVienas);
 
-// // 21 Suskurti nauja array ir i ji, naudojant for cikla, ideti 5 jusu objekto tipo kintamuosius (turetu tureti is 20 uzduoties savybes ir reiksmes)
+//  21 Suskurti nauja array ir i ji, naudojant for cikla,
+//  ideti 5 jusu objekto tipo kintamuosius (turetu tureti is 20 uzduoties savybes ir reiksmes)
 let array3 = [];
 
 for (let i = 0; i < 5; i++) {
@@ -106,7 +109,8 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(array3)
 
-// // 22 I html isideti mygtuka ant kurio paspaudus vykdytu nauja funkcija ir consoleje atvaizduotu 21 uzduoties rezultata
+//  22 I html isideti mygtuka ant kurio paspaudus vykdytu nauja funkcija
+//  ir consoleje atvaizduotu 21 uzduoties rezultata
 function displayResults() {
     console.log(array3);
 }

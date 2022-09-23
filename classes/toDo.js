@@ -3,3 +3,5 @@ class toDolist {
         this.list = document.getElementById('list');
         this.toDo = [];
         this.update();
+    }
+}
