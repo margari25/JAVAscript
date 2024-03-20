@@ -5,9 +5,9 @@ const inputElement = document.getElementById('input');
 const addButton = document.getElementById('addButton');
 
 // Susikuriam array kuriam talpinsim dar nepadarytus tasks
-let todoArray = ['Learn HTML', 'Learn CSS', 'Learn Javascript'];
+let todoArray = ['To get a job'];
 // Susikuriam array kuriam talpsinsim padarytus tasks
-let doneArray = ['Rest'];
+let doneArray = ['Rest', 'Learn HTML', 'Learn CSS', 'Learn Javascript'];
 
 // Prideti nauja user ivesta task i todo
 function addTodo() {
